@@ -189,11 +189,14 @@ if (hasSpecial) {
 
 console.log(characters);
 
-const Password = "";
-for (i = 0; i <  numericCharacters; i++) {
+var Password = "";
+for (i = 0; i < numberOfCharacters; i++) {
   Password = getRandom(characters) + characters;
+  
+};
 
-}
-return password;
+
+
+
 
 console.log(password);
