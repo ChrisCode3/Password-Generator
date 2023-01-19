@@ -1,3 +1,5 @@
+
+
 // Array of special characters to be included in password
 var specialCharacters = [
   '@',
@@ -88,6 +90,9 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
+console.log(getPasswordOptions);
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
@@ -116,3 +121,13 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+
+numberofCharacter = prompt("How many characters do you want in your password? Choose between 8-128 characters.");
+if (numberofCharacter < 8 || numberOfCharacters > 128  ) {
+}
+else {
+  alert("Your password will be " + numberOfCharacters + " characters long.");
+  
+}
