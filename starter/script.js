@@ -1,7 +1,7 @@
 
 
 // Array of special characters to be included in password
-var specialCharacters = [
+const specialCharacters = [
   '@',
   '%',
   '+',
@@ -31,7 +31,7 @@ var specialCharacters = [
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+const lowerCasedCharacters = [
   'a',
   'b',
   'c',
@@ -61,7 +61,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+const upperCasedCharacters = [
   'A',
   'B',
   'C',
@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 ];
 
 
-console.log(getPasswordOptions);
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -124,10 +124,76 @@ generateBtn.addEventListener('click', writePassword);
 
 
 
-numberofCharacter = prompt("How many characters do you want in your password? Choose between 8-128 characters.");
-if (numberofCharacter < 8 || numberOfCharacters > 128  ) {
+numberOfCharacters = prompt("How many characters do you want in your password? Choose between 8-128 characters.");
+if (numberOfCharacters < 8 || numberOfCharacters > 128) {
+} else if (isNaN(numberOfCharacters)) {
+  numberOfCharacters = prompt("Please enter a valid number.");
 }
 else {
   alert("Your password will be " + numberOfCharacters + " characters long.");
-  
+
 }
+
+yesLowercase = confirm("Do you want lowercase characters?");
+if (yesLowercase) {
+  var turnToLowercase = alert("Your password will have lowercase characters.");
+}
+else {
+  alert("Your password will NOT have lowercase characters.");
+}
+
+
+yesUppercase = confirm("Do you want uppercase characters?");
+if (yesUppercase) {
+  alert("Your password will have uppercase characters.");
+}
+else {
+  alert("Your password will NOT have uppercase characters.");
+}
+
+
+
+isNumbers = confirm("Do you want to use numbers?");
+if (isNumbers) {
+  alert("Your password will have numbers.");
+
+}
+else {
+  alert("Your password will NOT have numbers.");
+}
+
+hasSpecial = confirm("Do you want special characters?");
+if (hasSpecial) {
+  alert("Your password will have special characters.");
+}
+else {
+  alert("Your password will NOT have special characters.");
+}
+
+let characters = [];
+
+if (yesLowercase) {
+  characters.push(lowerCasedCharacters);
+}
+
+if (yesUppercase) {
+  characters.push(upperCasedCharacters);
+}
+if (isNumbers) {
+  characters.push(numericCharacters);
+}
+
+if (hasSpecial) {
+  characters.push(specialCharacters);
+}
+
+console.log(characters);
+
+const Password = "";
+for (i = 0; i <  numericCharacters; i++) {
+  Password = getRandom(characters) + characters;
+
+}
+return password;
+
+console.log(password);
