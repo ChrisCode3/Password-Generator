@@ -119,6 +119,7 @@ else {
 
 }
 
+<<<<<<< HEAD
 yesLowercase = confirm("Do you want lowercase characters?");
 if (yesLowercase) {
   var turnToLowercase = alert("Your password will have lowercase characters.");
@@ -126,6 +127,18 @@ if (yesLowercase) {
 else {
   alert("Your password will NOT have lowercase characters.");
 }
+=======
+  yesLowercase = confirm("Do you want lowercase characters?");
+  if (yesLowercase) {
+
+
+    var turnToLowercase = alert("Your password will have lowercase characters.");
+
+  }
+  else {
+    alert("Your password will NOT have lowercase characters.");
+  }
+>>>>>>> 67130a99f0520780be5a48cec6a1d66cc1665123
 
 
 yesUppercase = confirm("Do you want uppercase characters?");
