@@ -60,7 +60,10 @@ function generatePassword() {
 
   yesLowercase = confirm("Do you want lowercase characters?");
   if (yesLowercase) {
+
+
     var turnToLowercase = alert("Your password will have lowercase characters.");
+
   }
   else {
     alert("Your password will NOT have lowercase characters.");
